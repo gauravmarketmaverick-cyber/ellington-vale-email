@@ -104,12 +104,16 @@ u + .body .fallback{display:block!important;max-height:none!important;overflow:v
    photo becomes a glaring slab. So this email refuses to invert.
 -------------------------------------------------------------------------- */
 @media (prefers-color-scheme:dark){
+  body,.body{background:#F2F0EC!important;}
   .sheet{background:#FFFFFF!important;}
+  .dark-band{background:#16130F!important;}
   .display,.d-ink{color:#16130F!important;}
   .body-copy{color:#4A443C!important;}
   .eyebrow,.caption{color:#6E665C!important;}
 }
+[data-ogsc] body,[data-ogsc] .body{background:#F2F0EC!important;}
 [data-ogsc] .sheet{background:#FFFFFF!important;}
+[data-ogsc] .dark-band{background:#16130F!important;}
 [data-ogsc] .display,[data-ogsc] .d-ink{color:#16130F!important;}
 [data-ogsc] .body-copy{color:#4A443C!important;}
 [data-ogsc] .eyebrow,[data-ogsc] .caption{color:#6E665C!important;}
@@ -125,7 +129,7 @@ u + .body .fallback{display:block!important;max-height:none!important;overflow:v
   &#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;
 </div>
 
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#F2F0EC" style="background:#F2F0EC;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="body" bgcolor="#F2F0EC" style="background:#F2F0EC;">
 <tr><td align="center" style="padding:0;">
 
 <table role="presentation" cellpadding="0" cellspacing="0" border="0" class="wrap sheet" width="600"
@@ -279,7 +283,7 @@ u + .body .fallback{display:block!important;max-height:none!important;overflow:v
 
   <!-- ═══ THE PRACTICE — the one dark band ══════════════════════════════ -->
   <tr><td class="px" style="padding:0 40px;">
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#16130F" style="background:#16130F;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="dark-band" bgcolor="#16130F" style="background:#16130F;">
       <tr><td align="center" style="padding:44px 34px 0;">
         <!-- ► EDIT — band label + headline + the five items -->
         <p class="eyebrow" style="color:#C9B08A;">The Practice</p>
