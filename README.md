@@ -42,6 +42,27 @@ Two real fixes are used instead:
   immune. The tradeoff: to edit that copy, you regenerate the image
   rather than editing text directly.
 
+## The top block is now a flattened image
+
+`img/top-block.jpg` — wordmark, nav, eyebrow, headline, subhead, and
+button, baked into one picture instead of live text on a colored
+background.
+
+**Why:** Gmail's mobile app (iOS and Android) forcibly recolors emails
+when the app is in dark mode, regardless of what the sender's CSS says.
+There is no code-level opt-out for this in Gmail's app specifically —
+it's a documented industry-wide limitation, confirmed by Litmus, not a
+bug unique to this file. The one thing it cannot do is repaint pixels
+inside a photograph. So this section is now immune, in every client,
+every mode, permanently.
+
+**The trade-off:** the four nav links are no longer individually
+clickable — the whole block links through as one unit instead. To
+change any word in this section, regenerate `img/top-block.jpg`; it can
+no longer be edited as text directly in the HTML. Everything below this
+block (the Lookbook, the Practice band, the note, the footer) is
+untouched and works exactly as before.
+
 ## Folder structure
 
 ```
@@ -55,7 +76,22 @@ img/
   practice-band.jpg         ← flattened "Five disciplines" section
 ```
 
-## GitHub Pages — confirmed
+## Status: ready to send
+
+This file has real copy in it now — every `{{ }}` placeholder has been
+replaced. It's the Veldrin case study draft used throughout this project.
+Read it once before your next test; swap any line that doesn't sound like
+Ellington & Vale.
+
+Two links still point at placeholders and need a real destination before
+a live send:
+- Social links (`Instagram`, `LinkedIn`, `Behance`) point at guessed URLs
+  — confirm or replace them.
+- `Unsubscribe` and `Update preferences` currently point at `#` (nowhere)
+  — an unsubscribe link is a legal requirement for commercial email in
+  most places, so this needs a real link before sending to anyone outside
+  your own test inbox.
+
 
 This build is already set for your repo:
 
