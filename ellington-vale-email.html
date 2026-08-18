@@ -142,31 +142,22 @@ u + .body .fallback{display:block!important;max-height:none!important;overflow:v
        testing is done. ══════════════════════════════════════════════════ -->
   <tr><td align="center" class="sheet" bgcolor="#FFFFFF" style="padding:10px 26px 0;background-color:#FFFFFF;">
     <p style="font-family:Arial,sans-serif;font-size:10px;letter-spacing:.05em;color:#5C1A22;">
-      TEST BUILD — light-only meta tag fix v3 — 18 Aug 2026
+      TEST BUILD — header-as-image fix v4 — 18 Aug 2026
     </p>
   </td></tr>
 
-  <!-- ═══ VIEW IN BROWSER ═══════════════════════════════════════════════ -->
-  <tr><td align="center" class="sheet" bgcolor="#FFFFFF" style="padding:18px 26px 0;background-color:#FFFFFF;">
-    <p class="eyebrow" style="font-size:9px;letter-spacing:.16em;color:#A9A199;">
-      <a href="#" style="color:#A9A199;">View in browser</a>
-    </p>
-  </td></tr>
-
-  <!-- ═══ WORDMARK ══════════════════════════════════════════════════════
-       Live type in the prototype. Swap for your SVG/PNG wordmark later —
-       max 220px wide, transparent padding, black and white versions.
+  <!-- ═══ HEADER (View in browser / Wordmark / Nav) ══════════════════════
+       Rendered as a single image instead of live HTML text. Gmail's iOS
+       app applies a more aggressive dark-mode color inversion than
+       Android and does not respect any CSS override for it — confirmed
+       by comparing this file against a real Economist marketing email's
+       raw source, where every colored/text section is likewise a
+       pre-rendered image, not live styled HTML. Images are never
+       inverted by Gmail on either platform, so this sidesteps the bug
+       entirely instead of continuing to fight it with CSS.
   ══════════════════════════════════════════════════════════════════════ -->
-  <tr><td align="center" class="sheet" bgcolor="#FFFFFF" style="padding:32px 26px 0;background-color:#FFFFFF;">
-    <p class="d-ink" style="font-family:Didot,'Bodoni MT',Georgia,serif;font-size:16px;
-       letter-spacing:.36em;text-transform:uppercase;color:#16130F;">Ellington &amp; Vale</p>
-  </td></tr>
-
-  <!-- ═══ NAV ═══════════════════════════════════════════════════════════ -->
-  <tr><td align="center" class="sheet" bgcolor="#FFFFFF" style="padding:20px 26px 28px;background-color:#FFFFFF;">
-    <p class="eyebrow" style="font-size:9px;letter-spacing:.2em;">
-      <a href="#" style="color:#6E665C;">Work</a><span style="color:#E3DED6;padding:0 8px;">/</span><a href="#" style="color:#6E665C;">Offerings</a><span style="color:#E3DED6;padding:0 8px;">/</span><a href="#" style="color:#6E665C;">Studio</a><span style="color:#E3DED6;padding:0 8px;">/</span><a href="#" style="color:#6E665C;">Journal</a>
-    </p>
+  <tr><td align="center" class="sheet" bgcolor="#FFFFFF" style="padding:0;background-color:#FFFFFF;">
+    <img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/assets/image-header-nav.png" width="600" alt="View in browser — Ellington &amp; Vale — Work / Offerings / Studio / Journal" style="display:block;width:100%;max-width:600px;height:auto;">
   </td></tr>
 
   <!-- ═══ HERO ══════════════════════════════════════════════════════════
