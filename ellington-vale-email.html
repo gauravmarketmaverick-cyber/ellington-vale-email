@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="x-apple-disable-message-reformatting">
+<meta name="color-scheme" content="light">
+<meta name="supported-color-schemes" content="light">
+<title>Ellington &amp; Vale</title>
+
+<!--[if mso]>
+<xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml>
+<![endif]-->
+
+<style>
+/* ==========================================================================
+   ELLINGTON & VALE — EMAIL SYSTEM  ·  PROTOTYPE
+
+   EVERY LINE OF COPY IS A SLOT. Replace the words, keep the structure.
+   Each editable region is marked with  <!-- ► EDIT -->  in the HTML below.
+
+   TOKENS
+   Ink       #16130F   headlines, wordmark
+   Paper     #FFFFFF   the sheet — cutouts sit on this, edges vanish
+   Oxblood   #5C1A22   the only accent. From the bag and the tie.
+   Camel     #C9B08A   hairline, dark band only
+   Stone     #6E665C   secondary copy
+   Rule      #E3DED6   hairlines
+
+   TYPE
+   Display   Didot / Bodoni MT / Georgia
+   Utility   Helvetica Neue / Arial, uppercase, .2em tracked
+   ========================================================================== */
+
+body,table,td,a{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
+table,td{mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;}
+img{-ms-interpolation-mode:bicubic;border:0;height:auto;line-height:100%;outline:none;text-decoration:none;display:block;}
+body{margin:0!important;padding:0!important;width:100%!important;background:#F2F0EC;}
+a{text-decoration:none;}
+p{margin:0;}
+
+.wrap{width:600px;}
+
+.eyebrow{font-family:'Helvetica Neue',Arial,sans-serif;font-size:10px;letter-spacing:.24em;
+  text-transform:uppercase;color:#6E665C;line-height:1.6;}
+.display{font-family:Didot,'Bodoni MT','Playfair Display',Georgia,serif;font-size:34px;line-height:1.2;
+  letter-spacing:-.005em;color:#16130F;font-weight:400;}
+.body-copy{font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;line-height:1.8;color:#4A443C;}
+.caption{font-family:'Helvetica Neue',Arial,sans-serif;font-size:10px;letter-spacing:.18em;
+  text-transform:uppercase;color:#6E665C;}
+
+/* --- INTERACTIVE / FALLBACK ----------------------------------------------
+   Applied to DIVs only, never to table cells — table display values are
+   where email layouts go to die. Default state is the static fallback, so
+   every client renders a complete email. The interactive layer is switched
+   on only where :checked and sibling selectors actually work.
+-------------------------------------------------------------------------- */
+.interactive{display:none;max-height:0;overflow:hidden;mso-hide:all;}
+.fallback{display:block;}
+
+@media screen and (-webkit-min-device-pixel-ratio:0){
+  .interactive{display:block!important;max-height:none!important;overflow:visible!important;}
+  .fallback{display:none!important;max-height:0!important;overflow:hidden!important;}
+}
+/* Gmail strips <input> entirely — send it back to the static version */
+u + .body .interactive{display:none!important;max-height:0!important;overflow:hidden!important;}
+u + .body .fallback{display:block!important;max-height:none!important;overflow:visible!important;}
+
+/* --- THE LOOKBOOK --------------------------------------------------------- */
+.lb-input{display:none!important;}
+.lb-slide{display:none;}
+#lk1:checked ~ .lb-stage .lb-1,
+#lk2:checked ~ .lb-stage .lb-2,
+#lk3:checked ~ .lb-stage .lb-3,
+#lk4:checked ~ .lb-stage .lb-4{display:block;}
+
+.lb-thumb{display:inline-block;width:96px;margin:0 5px;cursor:pointer;
+  padding-bottom:9px;border-bottom:1px solid #E3DED6;opacity:.4;}
+#lk1:checked ~ .lb-nav .th1,
+#lk2:checked ~ .lb-nav .th2,
+#lk3:checked ~ .lb-nav .th3,
+#lk4:checked ~ .lb-nav .th4{opacity:1;border-bottom:1px solid #5C1A22;}
+
+/* --- THE NOTE ------------------------------------------------------------- */
+.rv-input{display:none!important;}
+.rv-body{max-height:0;overflow:hidden;}
+#rv:checked ~ .rv-body{max-height:700px;}
+.rv-close{display:none;}
+#rv:checked ~ .rv-toggle .rv-open{display:none;}
+#rv:checked ~ .rv-toggle .rv-close{display:inline;}
+
+/* --- MOBILE --------------------------------------------------------------- */
+@media screen and (max-width:620px){
+  .wrap{width:100%!important;}
+  .px{padding-left:26px!important;padding-right:26px!important;}
+  .display{font-size:27px!important;}
+  .lb-thumb{width:62px!important;margin:0 3px!important;}
+  .stack{display:block!important;width:100%!important;padding:0 0 26px 0!important;}
+  .hide-sm{display:none!important;}
+}
+
+/* --- DARK MODE ------------------------------------------------------------
+   The figures are cut out on white. If a client inverts the sheet, each
+   photo becomes a glaring slab. So this email refuses to invert.
+-------------------------------------------------------------------------- */
+@media (prefers-color-scheme:dark){
+  .sheet{background:#FFFFFF!important;}
+  .display,.d-ink{color:#16130F!important;}
+  .body-copy{color:#4A443C!important;}
+  .eyebrow,.caption{color:#6E665C!important;}
+}
+[data-ogsc] .sheet{background:#FFFFFF!important;}
+[data-ogsc] .display,[data-ogsc] .d-ink{color:#16130F!important;}
+[data-ogsc] .body-copy{color:#4A443C!important;}
+[data-ogsc] .eyebrow,[data-ogsc] .caption{color:#6E665C!important;}
+</style>
+</head>
+
+<body class="body" bgcolor="#F2F0EC" style="margin:0;padding:0;background:#F2F0EC;">
+
+<!-- ► EDIT — preheader. The line beside the subject in the inbox.
+     60–90 characters. Never repeat the subject; this is a second headline. -->
+<div style="display:none;font-size:1px;color:#FFFFFF;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;">
+  Three collections, no through-line. What we did about it.
+  &#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;
+</div>
+
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#F2F0EC" style="background:#F2F0EC;">
+<tr><td align="center" style="padding:0;">
+
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" class="wrap sheet" width="600"
+       bgcolor="#FFFFFF" style="width:600px;max-width:600px;background:#FFFFFF;">
+
+  <!-- ═══ VIEW IN BROWSER ═══════════════════════════════════════════════ -->
+  <tr><td align="center" style="padding:18px 26px 0;">
+    <p class="eyebrow" style="font-size:9px;letter-spacing:.16em;color:#A9A199;">
+      <a href="#" style="color:#A9A199;">View in browser</a>
+    </p>
+  </td></tr>
+
+  <!-- ═══ WORDMARK ══════════════════════════════════════════════════════
+       Live type in the prototype. Swap for your SVG/PNG wordmark later —
+       max 220px wide, transparent padding, black and white versions.
+  ══════════════════════════════════════════════════════════════════════ -->
+  <tr><td align="center" style="padding:32px 26px 0;">
+    <p class="d-ink" style="font-family:Didot,'Bodoni MT',Georgia,serif;font-size:16px;
+       letter-spacing:.36em;text-transform:uppercase;color:#16130F;">Ellington &amp; Vale</p>
+  </td></tr>
+
+  <!-- ═══ NAV ═══════════════════════════════════════════════════════════ -->
+  <tr><td align="center" style="padding:20px 26px 28px;">
+    <p class="eyebrow" style="font-size:9px;letter-spacing:.2em;">
+      <a href="#" style="color:#6E665C;">Work</a><span style="color:#E3DED6;padding:0 8px;">/</span><a href="#" style="color:#6E665C;">Offerings</a><span style="color:#E3DED6;padding:0 8px;">/</span><a href="#" style="color:#6E665C;">Studio</a><span style="color:#E3DED6;padding:0 8px;">/</span><a href="#" style="color:#6E665C;">Journal</a>
+    </p>
+  </td></tr>
+
+  <!-- ═══ HERO ══════════════════════════════════════════════════════════
+       Full bleed. No type on the image — the picture carries it.
+  ══════════════════════════════════════════════════════════════════════ -->
+  <tr><td style="padding:0;font-size:0;line-height:0;">
+    <img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/assets/image-01.jpg" width="600" alt="Campaign — the collective, autumn"
+         style="display:block;width:100%;max-width:600px;height:auto;">
+  </td></tr>
+
+  <!-- ═══ STATEMENT ═════════════════════════════════════════════════════ -->
+  <tr><td class="px" align="center" style="padding:54px 60px 0;">
+    <!-- ► EDIT — eyebrow -->
+    <p class="eyebrow">Chapter 04 &nbsp;·&nbsp; New Work</p>
+  </td></tr>
+  <tr><td class="px" align="center" style="padding:20px 60px 0;">
+    <!-- ► EDIT — headline. One line if you can. Two at most. -->
+    <h1 class="display">A house style,<br>built to travel.</h1>
+  </td></tr>
+  <tr><td class="px" align="center" style="padding:24px 60px 0;">
+    <!-- ► EDIT — subhead. Two sentences. Say the idea, not the offer. -->
+    <p class="body-copy" style="max-width:400px;margin:0 auto;">
+      Veldrin arrived with three collections and no through-line. We gave them one
+      position, and an identity strong enough to carry it — campaign, packaging, store.
+    </p>
+  </td></tr>
+
+  <!-- ═══ BUTTON — one per email ════════════════════════════════════════ -->
+  <tr><td align="center" style="padding:34px 26px 0;">
+    <!--[if mso]>
+    <v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word"
+      href="#" style="height:44px;v-text-anchor:middle;width:200px;" strokecolor="#5C1A22" strokeweight="1px" fillcolor="#FFFFFF">
+      <w:anchorlock/>
+      <center style="color:#5C1A22;font-family:Arial,sans-serif;font-size:10px;letter-spacing:2px;">SEE THE WORK</center>
+    </v:rect>
+    <![endif]-->
+    <!--[if !mso]><!-->
+    <!-- ► EDIT — button label + link -->
+    <a href="#" style="display:inline-block;border:1px solid #5C1A22;color:#5C1A22;
+       font-family:'Helvetica Neue',Arial,sans-serif;font-size:10px;letter-spacing:.22em;
+       text-transform:uppercase;padding:15px 32px;background:#FFFFFF;">See the work</a>
+    <!--<![endif]-->
+  </td></tr>
+
+  <tr><td style="height:62px;font-size:0;line-height:0;">&nbsp;</td></tr>
+
+  <!-- ╔══════════════════════════════════════════════════════════════════╗
+       ║  THE LOOKBOOK — the signature module                              ║
+       ║  Tap a thumbnail, the figure changes inside the email.             ║
+       ║  Apple Mail (macOS + iOS) and Samsung Mail get the interaction.    ║
+       ║  Gmail and Outlook get a static row — a good email, not a broken   ║
+       ║  one. That distinction is the whole discipline.                    ║
+       ╚══════════════════════════════════════════════════════════════════╝ -->
+
+  <tr><td class="px" align="center" style="padding:44px 60px 0;border-top:1px solid #E3DED6;">
+    <!-- ► EDIT — module label -->
+    <p class="eyebrow">The Lookbook</p>
+  </td></tr>
+
+  <tr><td class="px" style="padding:0 40px;">
+
+    <!-- ── INTERACTIVE ─────────────────────────────────────────────── -->
+    <div class="interactive">
+      <div style="text-align:center;">
+
+        <input class="lb-input" type="radio" name="lb" id="lk1" checked>
+        <input class="lb-input" type="radio" name="lb" id="lk2">
+        <input class="lb-input" type="radio" name="lb" id="lk3">
+        <input class="lb-input" type="radio" name="lb" id="lk4">
+
+        <div class="lb-stage" style="padding:22px 0 0;">
+          <!-- ► EDIT — four looks: image, name, description -->
+          <div class="lb-slide lb-1">
+            <img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/assets/image-02.jpg" width="300" alt="Ivory silk, cut on the bias" style="width:300px;max-width:88%;margin:0 auto;">
+            <p class="caption" style="padding-top:22px;">01 &nbsp;—&nbsp; Ivory silk, cut on the bias</p>
+          </div>
+          <div class="lb-slide lb-2">
+            <img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/assets/image-03.jpg" width="300" alt="Oxblood calf, gold hardware" style="width:300px;max-width:88%;margin:0 auto;">
+            <p class="caption" style="padding-top:22px;">02 &nbsp;—&nbsp; Oxblood calf, gold hardware</p>
+          </div>
+          <div class="lb-slide lb-3">
+            <img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/assets/image-04.jpg" width="300" alt="Charcoal wool, structured shoulder" style="width:300px;max-width:88%;margin:0 auto;">
+            <p class="caption" style="padding-top:22px;">03 &nbsp;—&nbsp; Charcoal wool, structured shoulder</p>
+          </div>
+          <div class="lb-slide lb-4">
+            <img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/assets/image-05.jpg" width="300" alt="Aged leather over taupe tailoring" style="width:300px;max-width:88%;margin:0 auto;">
+            <p class="caption" style="padding-top:22px;">04 &nbsp;—&nbsp; Aged leather over taupe tailoring</p>
+          </div>
+        </div>
+
+        <div class="lb-nav" style="padding:26px 0 0;font-size:0;">
+          <label for="lk1" class="lb-thumb th1"><img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/assets/image-06.jpg"    width="96" alt="" style="width:100%;"></label>
+          <label for="lk2" class="lb-thumb th2"><img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/assets/image-07.jpg"  width="96" alt="" style="width:100%;"></label>
+          <label for="lk3" class="lb-thumb th3"><img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/assets/image-08.jpg" width="96" alt="" style="width:100%;"></label>
+          <label for="lk4" class="lb-thumb th4"><img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/assets/image-09.jpg"  width="96" alt="" style="width:100%;"></label>
+        </div>
+
+        <p class="eyebrow" style="padding-top:20px;font-size:9px;color:#B3ABA1;">Select to view</p>
+      </div>
+    </div>
+
+    <!-- ── STATIC FALLBACK ─────────────────────────────────────────── -->
+    <div class="fallback">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="padding-top:26px;">
+        <tr>
+          <td class="stack" width="33.33%" valign="top" style="padding:0 8px;">
+            <a href="#"><img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/assets/image-10.jpg" width="160" alt="Ivory silk, cut on the bias" style="width:100%;"></a>
+            <p class="caption" style="padding:16px 0 0;text-align:center;">01 — Ivory silk</p>
+          </td>
+          <td class="stack" width="33.33%" valign="top" style="padding:0 8px;">
+            <a href="#"><img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/assets/image-11.jpg" width="160" alt="Oxblood calf, gold hardware" style="width:100%;"></a>
+            <p class="caption" style="padding:16px 0 0;text-align:center;">02 — Oxblood calf</p>
+          </td>
+          <td class="stack" width="33.33%" valign="top" style="padding:0 8px;">
+            <a href="#"><img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/assets/image-12.jpg" width="160" alt="Charcoal wool, structured shoulder" style="width:100%;"></a>
+            <p class="caption" style="padding:16px 0 0;text-align:center;">03 — Charcoal wool</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+  </td></tr>
+
+  <tr><td style="height:64px;font-size:0;line-height:0;">&nbsp;</td></tr>
+
+  <!-- ═══ THE PRACTICE — the one dark band ══════════════════════════════ -->
+  <tr><td class="px" style="padding:0 40px;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#16130F" style="background:#16130F;">
+      <tr><td align="center" style="padding:44px 34px 0;">
+        <!-- ► EDIT — band label + headline + the five items -->
+        <p class="eyebrow" style="color:#C9B08A;">The Practice</p>
+      </td></tr>
+      <tr><td align="center" style="padding:20px 34px 0;">
+        <p style="font-family:Didot,'Bodoni MT',Georgia,serif;font-size:22px;color:#FFFFFF;line-height:1.45;">
+          Five disciplines.<br>One idea.
+        </p>
+      </td></tr>
+      <tr><td align="center" style="padding:26px 34px 44px;">
+        <p style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:9.5px;
+           letter-spacing:.18em;text-transform:uppercase;color:#A79E93;line-height:2.4;">
+          Brand Strategy &nbsp;·&nbsp; Identity &amp; Design &nbsp;·&nbsp; Creative Direction<br>
+          Marketing &amp; Campaigns &nbsp;·&nbsp; Digital &amp; Web
+        </p>
+      </td></tr>
+    </table>
+  </td></tr>
+
+  <tr><td style="height:64px;font-size:0;line-height:0;">&nbsp;</td></tr>
+
+  <!-- ╔══════════════════════════════════════════════════════════════════╗
+       ║  THE NOTE — second interactive module                             ║
+       ║  A closed line that opens. Carries the long thought without        ║
+       ║  making the email long.                                            ║
+       ╚══════════════════════════════════════════════════════════════════╝ -->
+  <tr><td class="px" style="padding:0 60px;">
+
+    <div class="interactive">
+      <div style="border-top:1px solid #E3DED6;padding-top:38px;text-align:center;">
+        <input class="rv-input" type="checkbox" id="rv">
+        <label for="rv" class="rv-toggle" style="cursor:pointer;display:block;">
+          <span class="eyebrow" style="color:#5C1A22;">
+            <span class="rv-open">Read the note &nbsp;+</span>
+            <span class="rv-close">Close &nbsp;&minus;</span>
+          </span>
+        </label>
+        <div class="rv-body">
+          <!-- ► EDIT — the longer thought. Three or four sentences. -->
+          <p class="body-copy" style="max-width:420px;margin:28px auto 0;text-align:left;">
+            Most identity work fails at the third application. It holds on the logo sheet,
+            holds on the packaging, then falls apart the moment someone needs a store window
+            or a paid social frame at 4pm on a Friday. So we build the awkward cases first —
+            the ones nobody puts in the deck.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="fallback">
+      <div style="border-top:1px solid #E3DED6;padding-top:38px;">
+        <p class="eyebrow" style="color:#5C1A22;text-align:center;">Read the note</p>
+        <p class="body-copy" style="max-width:420px;margin:28px auto 0;">
+          Most identity work fails at the third application. It holds on the logo sheet,
+          holds on the packaging, then falls apart the moment someone needs a store window
+          or a paid social frame at 4pm on a Friday. So we build the awkward cases first —
+          the ones nobody puts in the deck.
+        </p>
+      </div>
+    </div>
+
+  </td></tr>
+
+  <tr><td style="height:56px;font-size:0;line-height:0;">&nbsp;</td></tr>
+
+  <!-- ═══ SIGN-OFF ══════════════════════════════════════════════════════ -->
+  <tr><td class="px" align="center" style="padding:0 60px;">
+    <!-- ► EDIT — sign-off line and name -->
+    <p class="body-copy" style="max-width:380px;margin:0 auto;font-style:italic;color:#6E665C;">
+      If you are building something that deserves to be recognised, write back.
+      One line is enough.
+    </p>
+    <p class="caption" style="padding-top:22px;">Ellington &amp; Vale &nbsp;·&nbsp; Gurugram</p>
+  </td></tr>
+
+  <tr><td style="height:60px;font-size:0;line-height:0;">&nbsp;</td></tr>
+
+  <!-- ═══ FOOTER ════════════════════════════════════════════════════════ -->
+  <tr><td class="px" align="center" style="padding:34px 40px 46px;border-top:1px solid #E3DED6;">
+    <p class="eyebrow" style="font-size:9px;">
+      <a href="#" style="color:#6E665C;">Instagram</a><span style="color:#E3DED6;padding:0 8px;">·</span><a href="#" style="color:#6E665C;">LinkedIn</a><span style="color:#E3DED6;padding:0 8px;">·</span><a href="#" style="color:#6E665C;">Behance</a>
+    </p>
+    <p class="body-copy" style="font-size:11px;line-height:1.9;color:#A9A199;padding-top:26px;">
+      Strategic branding and creative direction<br>
+      <!-- ► EDIT — full postal address is legally required -->
+      [Street address], Gurugram, India<br>
+      <a href="mailto:hello@ellingtonandvale.com" style="color:#A9A199;">hello@ellingtonandvale.com</a>
+    </p>
+    <p class="body-copy" style="font-size:10px;color:#BDB6AD;padding-top:22px;">
+      You are receiving this because you asked to hear from the studio.<br>
+      <a href="#" style="color:#BDB6AD;text-decoration:underline;">Unsubscribe</a>
+      &nbsp;·&nbsp;
+      <a href="#" style="color:#BDB6AD;text-decoration:underline;">Update preferences</a>
+    </p>
+  </td></tr>
+
+</table>
+</td></tr>
+</table>
+
+</body>
+</html>
