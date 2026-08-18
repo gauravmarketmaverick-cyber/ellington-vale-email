@@ -57,33 +57,6 @@ p{margin:0;}
   text-transform:uppercase;color:#A79C8C;line-height:1.7;}
 .quote{font-family:Georgia,serif;font-style:italic;font-size:15px;line-height:1.7;color:#1C1815;}
 
-/* --- INTERACTIVE / FALLBACK ----------------------------------------------
-   Default is static, so every client renders a complete letter. Switches
-   on for Apple Mail / Samsung Mail, switches back off for Gmail, which
-   strips <input> before the DOM ever sees it.
--------------------------------------------------------------------------- */
-.interactive{display:none;max-height:0;overflow:hidden;mso-hide:all;}
-.fallback{display:block;}
-@media screen and (-webkit-min-device-pixel-ratio:0){
-  .interactive{display:block!important;max-height:none!important;overflow:visible!important;}
-  .fallback{display:none!important;max-height:0!important;overflow:hidden!important;}
-}
-u + .body .interactive{display:none!important;max-height:0!important;overflow:hidden!important;}
-u + .body .fallback{display:block!important;max-height:none!important;overflow:visible!important;}
-
-/* --- THE ONE SWITCH — the whole page, not the photo alone ----------------- */
-.sw-in{display:none!important;}
-.sw-state{display:none;}
-#s1:checked ~ .sw-stage .st1,
-#s2:checked ~ .sw-stage .st2{display:block;}
-.sw-tab{display:inline-block;padding:12px 24px 11px;cursor:pointer;border-bottom:1px solid #E8E4DB;}
-#s1:checked ~ .sw-nav .tb1,
-#s2:checked ~ .sw-nav .tb2{border-bottom:1px solid #A8834E;}
-.sw-tab span{font-family:'Helvetica Neue',Arial,sans-serif;font-size:9px;
-  letter-spacing:.24em;text-transform:uppercase;color:#B8B0A4;}
-#s1:checked ~ .sw-nav .tb1 span,
-#s2:checked ~ .sw-nav .tb2 span{color:#1C1815;}
-
 @media screen and (max-width:620px){
   .wrap{width:100%!important;}
   .px{padding-left:26px!important;padding-right:26px!important;}
@@ -181,33 +154,12 @@ u + .body .fallback{display:block!important;max-height:none!important;overflow:v
 
   <tr><td align="center" class="px b-paper" bgcolor="#FFFFFF" style="padding:28px 40px 0;background-color:#FFFFFF;">
 
-    <div class="interactive">
-      <input class="sw-in" type="radio" name="sw" id="s1" checked>
-      <input class="sw-in" type="radio" name="sw" id="s2">
-      <div class="sw-nav" style="font-size:0;padding-bottom:20px;">
-        <label for="s1" class="sw-tab tb1"><span>As it stands</span></label><label
-               for="s2" class="sw-tab tb2"><span>As it could be</span></label>
-      </div>
-      <div class="sw-stage">
-        <div class="sw-state st1">
-          <img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/assets/observation-02.jpg" width="520" alt="The profile as it stands"
-               style="width:100%;max-width:520px;margin:0 auto;border:1px solid #E8E4DB;">
-        </div>
-        <div class="sw-state st2">
-          <img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/assets/observation-03.jpg" width="520" alt="The profile as it could be"
-               style="width:100%;max-width:520px;margin:0 auto;border:1px solid #E8E4DB;">
-        </div>
-      </div>
-    </div>
-
-    <div class="fallback">
-      <img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/assets/image-obs-as-it-stands.png" width="89" alt="As it stands" style="display:block;width:89px;height:auto;margin:0 0 12px;">
-      <img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/assets/observation-04.jpg" width="520" alt="The profile as it stands"
-           style="width:100%;max-width:520px;margin:0 auto;border:1px solid #E8E4DB;">
-      <img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/assets/image-obs-as-it-could-be.png" width="103" alt="As it could be" style="display:block;width:103px;height:auto;margin:30px 0 12px;">
-      <img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/assets/observation-05.jpg" width="520" alt="The profile as it could be"
-           style="width:100%;max-width:520px;margin:0 auto;border:1px solid #E8E4DB;">
-    </div>
+    <img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/assets/image-obs-as-it-stands.png" width="89" alt="As it stands" style="display:block;width:89px;height:auto;margin:0 0 12px;">
+    <img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/assets/observation-04.jpg" width="520" alt="The profile as it stands"
+         style="width:100%;max-width:520px;margin:0 auto;border:1px solid #E8E4DB;">
+    <img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/assets/image-obs-as-it-could-be.png" width="103" alt="As it could be" style="display:block;width:103px;height:auto;margin:30px 0 12px;">
+    <img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/assets/observation-05.jpg" width="520" alt="The profile as it could be"
+         style="width:100%;max-width:520px;margin:0 auto;border:1px solid #E8E4DB;">
 
   </td></tr>
 
