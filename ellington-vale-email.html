@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="x-apple-disable-message-reformatting">
+<meta name="color-scheme" content="light">
+<meta name="supported-color-schemes" content="light">
+<title>Ellington &amp; Vale</title>
+
+<!--[if mso]>
+<xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml>
+<![endif]-->
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     Image URLs are set for:
+       https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/img/...
+
+     Confirmed — repo: ellington-vale-email, user:
+     gauravmarketmaverick-cyber. Nothing left to swap here.
+
+     Before running a send test: open one image URL directly in a
+     browser first (e.g. .../img/hero-collective.jpg) to confirm Pages
+     is actually serving it. A 404 there means every image in a test
+     send will be broken too — Pages also needs the repo set to public
+     for an email client to fetch from it.
+     ══════════════════════════════════════════════════════════════════════ -->
+
+<style>
+/* ==========================================================================
+   ELLINGTON & VALE — EMAIL SYSTEM  ·  CORRECTED BUILD
+
+   ┌────────────────────────────────────────────────────────────────────┐
+   │  CHANGES IN THIS BUILD — both fixes were driven by real Gmail app    │
+   │  screenshots, not guesswork.                                         │
+   │                                                                       │
+   │  1. THE LOOKBOOK no longer uses a tap-to-switch toggle. That relied   │
+   │     on a CSS trick (hidden radio inputs + a rule that hides three     │
+   │     of four images) that Gmail's app does not reliably honour. It     │
+   │     was rendering as all four images shown at once, uncontrolled.     │
+   │     Replaced with an honest stacked sequence — every client shows     │
+   │     the same thing, on purpose, because nothing is being hidden       │
+   │     that depends on an interaction Gmail won't run.                   │
+   │                                                                       │
+   │  2. COLOR. Gmail's Android/iOS apps run their own forced dark-mode    │
+   │     pass that rewrites declared colors, and it does this even when    │
+   │     `<meta name="color-scheme" content="light">` explicitly asks it   │
+   │     not to. Neither `prefers-color-scheme` nor `[data-ogsc]` reach    │
+   │     Gmail's app — the first is inconsistently honoured there, the     │
+   │     second only helps Outlook.com. Two real defenses instead:         │
+   │       a) `bgcolor` as an HTML attribute, not just CSS, on every       │
+   │          color-critical cell — this measurably reduces how often      │
+   │          Gmail overrides it, though it is not a guarantee.            │
+   │       b) The Practice band — the section that broke worst, flipping   │
+   │          from dark-with-cream-text to light-with-dark-text — is now   │
+   │          a flattened image (img/practice-band.jpg). Gmail repaints    │
+   │          CSS backgrounds and text color; it does not repaint pixels   │
+   │          inside an image. That makes this one section immune, at      │
+   │          the cost of the text no longer being editable without        │
+   │          regenerating the image.                                      │
+   └────────────────────────────────────────────────────────────────────┘
+
+   TOKENS
+   Ink            #16130F   headline, wordmark
+   Paper          #FFFFFF   body
+   Oxblood        #5C1A22   sole accent
+   Camel          #C9B08A   hairline, Practice band only
+   Stone          #6E665C   secondary copy
+   Rule           #DCD6CC   hairlines
+   ========================================================================== */
+
+body,table,td,a{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
+table,td{mso-table-lspace:0pt;mso-table-rspace:0pt;}
+img{-ms-interpolation-mode:bicubic;border:0;height:auto;line-height:100%;outline:none;text-decoration:none;display:block;}
+body{margin:0!important;padding:0!important;width:100%!important;background:#F2F0EC;}
+a{text-decoration:none;}
+
+.wrap{width:600px;}
+.px{padding-left:44px;padding-right:44px;}
+
+.eyebrow{font-family:'Helvetica Neue',Arial,sans-serif;font-size:10px;letter-spacing:.22em;
+  text-transform:uppercase;color:#6E665C;line-height:1.6;margin:0;}
+.display{font-family:Didot,'Bodoni MT','Playfair Display',Georgia,serif;font-size:38px;line-height:1.14;
+  letter-spacing:-.01em;color:#16130F;margin:0;font-weight:400;}
+.body-copy{font-family:'Helvetica Neue',Arial,sans-serif;font-size:15px;line-height:1.75;color:#4A443C;margin:0;}
+.caption{font-family:'Helvetica Neue',Arial,sans-serif;font-size:11px;letter-spacing:.14em;
+  text-transform:uppercase;color:#6E665C;margin:0;}
+
+/* --- MOBILE --------------------------------------------------------------- */
+@media screen and (max-width:620px){
+  .wrap{width:100%!important;}
+  .px{padding-left:24px!important;padding-right:24px!important;}
+  .display{font-size:29px!important;}
+  .sp-lg{height:44px!important;}
+}
+
+/* --- DARK MODE (Apple Mail / Outlook.com only — see note above; Gmail's
+   app is defended separately via bgcolor + the flattened Practice image) */
+@media (prefers-color-scheme:dark){
+  .sheet{background:#FFFFFF!important;}
+  .display,.d-ink{color:#16130F!important;}
+  .body-copy{color:#4A443C!important;}
+  .eyebrow,.caption{color:#6E665C!important;}
+}
+[data-ogsc] .sheet{background:#FFFFFF!important;}
+[data-ogsc] .display,[data-ogsc] .d-ink{color:#16130F!important;}
+[data-ogsc] .body-copy{color:#4A443C!important;}
+[data-ogsc] .eyebrow,[data-ogsc] .caption{color:#6E665C!important;}
+</style>
+</head>
+
+<body class="body" style="margin:0;padding:0;background:#F2F0EC;" bgcolor="#F2F0EC">
+
+<div style="display:none;font-size:1px;color:#FFFFFF;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;">
+  {{PREHEADER — one line, 60-90 characters, earns the open}}
+  &#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;
+</div>
+
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="sheet"
+       style="background:#F2F0EC;" bgcolor="#F2F0EC">
+<tr><td align="center">
+
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" class="wrap" width="600"
+       style="width:600px;max-width:600px;background:#FFFFFF;" bgcolor="#FFFFFF">
+
+  <!-- ═══ VIEW IN BROWSER ═══════════════════════════════════════════════ -->
+  <tr><td align="center" style="padding:16px 24px 0;" bgcolor="#FFFFFF">
+    <p class="eyebrow" style="font-size:9px;letter-spacing:.16em;color:#9A9288;">
+      <a href="{{WEB_VERSION_URL}}" style="color:#9A9288;text-decoration:none;">View in browser</a>
+    </p>
+  </td></tr>
+
+  <!-- ═══ WORDMARK ══════════════════════════════════════════════════════ -->
+  <tr><td align="center" style="padding:34px 24px 0;" bgcolor="#FFFFFF">
+    <p class="d-ink" style="margin:0;font-family:Didot,'Bodoni MT',Georgia,serif;font-size:17px;
+       letter-spacing:.34em;text-transform:uppercase;color:#16130F;">Ellington &amp; Vale</p>
+  </td></tr>
+
+  <!-- ═══ NAV ═══════════════════════════════════════════════════════════ -->
+  <tr><td align="center" style="padding:22px 24px 26px;" bgcolor="#FFFFFF">
+    <p class="eyebrow" style="font-size:9.5px;letter-spacing:.2em;">
+      <a href="{{URL_WORK}}" style="color:#6E665C;">Work</a>
+      <span style="color:#DCD6CC;padding:0 9px;">/</span>
+      <a href="{{URL_OFFERINGS}}" style="color:#6E665C;">Offerings</a>
+      <span style="color:#DCD6CC;padding:0 9px;">/</span>
+      <a href="{{URL_STUDIO}}" style="color:#6E665C;">Studio</a>
+      <span style="color:#DCD6CC;padding:0 9px;">/</span>
+      <a href="{{URL_JOURNAL}}" style="color:#6E665C;">Journal</a>
+    </p>
+  </td></tr>
+
+  <!-- ═══ HERO ══════════════════════════════════════════════════════════ -->
+  <tr><td style="padding:0;">
+    <img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/img/hero-collective.jpg" width="600" alt="{{HERO_ALT}}"
+         style="display:block;width:100%;max-width:600px;height:auto;">
+  </td></tr>
+
+  <!-- ═══ STATEMENT ═════════════════════════════════════════════════════ -->
+  <tr><td class="px" align="center" style="padding:52px 44px 0;" bgcolor="#FFFFFF">
+    <p class="eyebrow">{{EYEBROW — e.g. Chapter 04 / New Work / The Journal}}</p>
+  </td></tr>
+
+  <tr><td class="px" align="center" style="padding:18px 44px 0;" bgcolor="#FFFFFF">
+    <h1 class="display">{{HEADLINE — one line if you can, two at most}}</h1>
+  </td></tr>
+
+  <tr><td class="px" align="center" style="padding:22px 44px 0;" bgcolor="#FFFFFF">
+    <p class="body-copy" style="max-width:420px;margin:0 auto;">{{SUBHEAD — two sentences. Say the idea, not the offer.}}</p>
+  </td></tr>
+
+  <!-- ═══ BUTTON ════════════════════════════════════════════════════════ -->
+  <tr><td align="center" style="padding:34px 44px 0;" bgcolor="#FFFFFF">
+    <!--[if mso]>
+    <v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word"
+      href="{{CTA_URL}}" style="height:44px;v-text-anchor:middle;width:228px;" strokecolor="#5C1A22" strokeweight="1px" fillcolor="#FFFFFF">
+      <w:anchorlock/>
+      <center style="color:#5C1A22;font-family:Arial,sans-serif;font-size:10px;letter-spacing:2px;">{{CTA_LABEL}}</center>
+    </v:rect>
+    <![endif]-->
+    <!--[if !mso]><!-->
+    <a href="{{CTA_URL}}" style="display:inline-block;border:1px solid #5C1A22;color:#5C1A22;
+       font-family:'Helvetica Neue',Arial,sans-serif;font-size:10px;letter-spacing:.2em;
+       text-transform:uppercase;padding:15px 34px;background:#FFFFFF;" bgcolor="#FFFFFF">{{CTA_LABEL}}</a>
+    <!--<![endif]-->
+  </td></tr>
+
+  <tr><td class="sp-lg" style="height:64px;font-size:0;line-height:0;">&nbsp;</td></tr>
+
+  <!-- ╔══════════════════════════════════════════════════════════════════╗
+       ║  THE LOOKBOOK — corrected                                         ║
+       ║                                                                    ║
+       ║  A stacked sequence, not a toggle. Every look shows, full width,   ║
+       ║  in order, with its caption directly beneath. This is what        ║
+       ║  Gmail's app was already rendering by accident when the toggle     ║
+       ║  failed — now it is the actual design, generously spaced, on      ║
+       ║  purpose, so it looks the same in every client without exception.  ║
+       ╚══════════════════════════════════════════════════════════════════╝ -->
+
+  <tr><td class="px" align="center" style="padding:0 44px 0;border-top:1px solid #DCD6CC;" bgcolor="#FFFFFF">
+    <div style="height:44px;font-size:0;">&nbsp;</div>
+    <p class="eyebrow">{{MODULE_LABEL — e.g. The Lookbook}}</p>
+  </td></tr>
+
+  <tr><td class="px" style="padding:30px 44px 0;" bgcolor="#FFFFFF">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr><td align="center">
+        <img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/img/look-ivory.jpg" width="360" alt="{{LOOK_1_ALT}}" style="width:100%;max-width:360px;margin:0 auto;">
+        <p class="caption" style="padding-top:16px;">{{LOOK_1_NAME — e.g. 01 — Ivory silk, cut on the bias}}</p>
+      </td></tr>
+    </table>
+  </td></tr>
+
+  <tr><td class="px" style="padding:44px 44px 0;" bgcolor="#FFFFFF">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr><td align="center">
+        <img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/img/look-oxblood.jpg" width="360" alt="{{LOOK_2_ALT}}" style="width:100%;max-width:360px;margin:0 auto;">
+        <p class="caption" style="padding-top:16px;">{{LOOK_2_NAME — e.g. 02 — Oxblood calf, gold hardware}}</p>
+      </td></tr>
+    </table>
+  </td></tr>
+
+  <tr><td class="px" style="padding:44px 44px 0;" bgcolor="#FFFFFF">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr><td align="center">
+        <img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/img/look-charcoal.jpg" width="360" alt="{{LOOK_3_ALT}}" style="width:100%;max-width:360px;margin:0 auto;">
+        <p class="caption" style="padding-top:16px;">{{LOOK_3_NAME — e.g. 03 — Charcoal wool, structured shoulder}}</p>
+      </td></tr>
+    </table>
+  </td></tr>
+
+  <tr><td class="px" style="padding:44px 44px 0;" bgcolor="#FFFFFF">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr><td align="center">
+        <img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/img/look-leather.jpg" width="360" alt="{{LOOK_4_ALT}}" style="width:100%;max-width:360px;margin:0 auto;">
+        <p class="caption" style="padding-top:16px;">{{LOOK_4_NAME — e.g. 04 — Aged leather over taupe tailoring}}</p>
+      </td></tr>
+    </table>
+  </td></tr>
+
+  <tr><td class="sp-lg" style="height:64px;font-size:0;line-height:0;">&nbsp;</td></tr>
+
+  <!-- ═══ THE PRACTICE ══════════════════════════════════════════════════
+       Flattened to a single image — see the note at the top of this file.
+       This section cannot be recolored by Gmail because there is no
+       declared color here for it to override; it is pixels.
+       To edit this copy, regenerate img/practice-band.jpg and swap it in.
+  ══════════════════════════════════════════════════════════════════════ -->
+  <tr><td style="padding:0 44px;" class="px" bgcolor="#FFFFFF">
+    <img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/img/practice-band.jpg" width="512" alt="The Practice — Five disciplines, one idea. Brand Strategy, Identity & Design, Creative Direction, Marketing & Campaigns, Digital & Web."
+         style="display:block;width:100%;max-width:512px;height:auto;margin:0 auto;">
+  </td></tr>
+
+  <tr><td class="sp-lg" style="height:64px;font-size:0;line-height:0;">&nbsp;</td></tr>
+
+  <!-- ═══ THE NOTE — a static reveal, always shown open ═══════════════════
+       This module previously had an interactive open/close toggle. Since
+       the Lookbook toggle failed in Gmail for the same underlying reason,
+       this one has been simplified too rather than leaving a second
+       untested interactive element in the file. It now always shows open.
+  ══════════════════════════════════════════════════════════════════════ -->
+  <tr><td class="px" style="padding:0 44px;" bgcolor="#FFFFFF">
+    <div style="border-top:1px solid #DCD6CC;padding-top:34px;text-align:center;">
+      <p class="eyebrow" style="color:#5C1A22;">{{REVEAL_PROMPT — e.g. A note from the studio}}</p>
+      <p class="body-copy" style="max-width:430px;margin:26px auto 0;">
+        {{REVEAL_BODY — the longer thought. Three or four sentences.}}
+      </p>
+    </div>
+  </td></tr>
+
+  <tr><td class="sp-lg" style="height:70px;font-size:0;line-height:0;">&nbsp;</td></tr>
+
+  <!-- ═══ SIGN-OFF ══════════════════════════════════════════════════════ -->
+  <tr><td class="px" align="center" style="padding:0 44px;" bgcolor="#FFFFFF">
+    <p class="body-copy" style="max-width:400px;margin:0 auto;font-style:italic;">{{SIGN_OFF_LINE}}</p>
+    <p class="caption" style="padding-top:20px;">{{YOUR_NAME}} &nbsp;·&nbsp; Ellington &amp; Vale</p>
+  </td></tr>
+
+  <tr><td class="sp-lg" style="height:64px;font-size:0;line-height:0;">&nbsp;</td></tr>
+
+  <!-- ═══ FOOTER ════════════════════════════════════════════════════════ -->
+  <tr><td class="px" align="center" style="padding:34px 44px 44px;border-top:1px solid #DCD6CC;" bgcolor="#FFFFFF">
+
+    <p class="eyebrow" style="font-size:9px;">
+      <a href="{{URL_INSTAGRAM}}" style="color:#6E665C;">Instagram</a>
+      <span style="color:#DCD6CC;padding:0 8px;">·</span>
+      <a href="{{URL_LINKEDIN}}" style="color:#6E665C;">LinkedIn</a>
+      <span style="color:#DCD6CC;padding:0 8px;">·</span>
+      <a href="{{URL_BEHANCE}}" style="color:#6E665C;">Behance</a>
+    </p>
+
+    <p class="body-copy" style="font-size:11px;line-height:1.9;color:#9A9288;padding-top:26px;margin:0;">
+      Ellington &amp; Vale &nbsp;·&nbsp; Strategic branding and creative direction<br>
+      {{STREET_ADDRESS}}, Gurugram, India<br>
+      <a href="mailto:hello@ellingtonandvale.com" style="color:#9A9288;">hello@ellingtonandvale.com</a>
+    </p>
+
+    <p class="body-copy" style="font-size:10px;color:#B3ABA1;padding-top:22px;margin:0;">
+      You are receiving this because {{CONSENT_LINE}}.<br>
+      <a href="{{UNSUB_URL}}" style="color:#B3ABA1;text-decoration:underline;">Unsubscribe</a>
+      &nbsp;·&nbsp;
+      <a href="{{PREFS_URL}}" style="color:#B3ABA1;text-decoration:underline;">Update preferences</a>
+    </p>
+
+  </td></tr>
+
+</table>
+</td></tr>
+</table>
+
+</body>
+</html>
