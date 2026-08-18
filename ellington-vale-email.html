@@ -112,7 +112,7 @@ a{text-decoration:none;}
 <body class="body" style="margin:0;padding:0;background:#F2F0EC;" bgcolor="#F2F0EC">
 
 <div style="display:none;font-size:1px;color:#FFFFFF;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;">
-  {{PREHEADER — one line, 60-90 characters, earns the open}}
+  Three collections, no through-line. What we did about it.
   &#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;
 </div>
 
@@ -123,65 +123,34 @@ a{text-decoration:none;}
 <table role="presentation" cellpadding="0" cellspacing="0" border="0" class="wrap" width="600"
        style="width:600px;max-width:600px;background:#FFFFFF;" bgcolor="#FFFFFF">
 
-  <!-- ═══ VIEW IN BROWSER ═══════════════════════════════════════════════ -->
-  <tr><td align="center" style="padding:16px 24px 0;" bgcolor="#FFFFFF">
-    <p class="eyebrow" style="font-size:9px;letter-spacing:.16em;color:#9A9288;">
-      <a href="{{WEB_VERSION_URL}}" style="color:#9A9288;text-decoration:none;">View in browser</a>
-    </p>
-  </td></tr>
+  <!-- ═══ TOP BLOCK — flattened to a single image ═══════════════════════
+       Wordmark, nav, eyebrow, headline, subhead and button are baked into
+       one picture (img/top-block.jpg) instead of live text on a colored
+       background. This is the section Gmail's mobile app was inverting to
+       black in testing — Gmail can recolor CSS and text, it cannot repaint
+       pixels inside a photograph, so this section now shows correctly in
+       every client, every mode, with no exceptions.
 
-  <!-- ═══ WORDMARK ══════════════════════════════════════════════════════ -->
-  <tr><td align="center" style="padding:34px 24px 0;" bgcolor="#FFFFFF">
-    <p class="d-ink" style="margin:0;font-family:Didot,'Bodoni MT',Georgia,serif;font-size:17px;
-       letter-spacing:.34em;text-transform:uppercase;color:#16130F;">Ellington &amp; Vale</p>
-  </td></tr>
-
-  <!-- ═══ NAV ═══════════════════════════════════════════════════════════ -->
-  <tr><td align="center" style="padding:22px 24px 26px;" bgcolor="#FFFFFF">
-    <p class="eyebrow" style="font-size:9.5px;letter-spacing:.2em;">
-      <a href="{{URL_WORK}}" style="color:#6E665C;">Work</a>
-      <span style="color:#DCD6CC;padding:0 9px;">/</span>
-      <a href="{{URL_OFFERINGS}}" style="color:#6E665C;">Offerings</a>
-      <span style="color:#DCD6CC;padding:0 9px;">/</span>
-      <a href="{{URL_STUDIO}}" style="color:#6E665C;">Studio</a>
-      <span style="color:#DCD6CC;padding:0 9px;">/</span>
-      <a href="{{URL_JOURNAL}}" style="color:#6E665C;">Journal</a>
-    </p>
+       Trade-off, on the record: the four nav links (Work / Offerings /
+       Studio / Journal) are no longer individually clickable — email image
+       maps are unreliable across clients, so the whole block instead links
+       through as one unit to the site. To change any word here, regenerate
+       img/top-block.jpg and swap it in; the text can no longer be edited
+       directly in this file. Same technique already used for
+       img/practice-band.jpg further down.
+  ══════════════════════════════════════════════════════════════════════ -->
+  <tr><td style="padding:0;" bgcolor="#FFFFFF">
+    <a href="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/ellington-vale-email.html">
+      <img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/img/top-block.jpg" width="600"
+           alt="Ellington and Vale. Chapter 04, New Work. A house style, built to travel. Veldrin arrived with three collections and no through-line. We gave them one position, and an identity strong enough to carry it, campaign, packaging, store."
+           style="display:block;width:100%;max-width:600px;height:auto;">
+    </a>
   </td></tr>
 
   <!-- ═══ HERO ══════════════════════════════════════════════════════════ -->
   <tr><td style="padding:0;">
-    <img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/img/hero-collective.jpg" width="600" alt="{{HERO_ALT}}"
+    <img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/img/hero-collective.jpg" width="600" alt="Ellington and Vale campaign photograph, models walking in monochrome"
          style="display:block;width:100%;max-width:600px;height:auto;">
-  </td></tr>
-
-  <!-- ═══ STATEMENT ═════════════════════════════════════════════════════ -->
-  <tr><td class="px" align="center" style="padding:52px 44px 0;" bgcolor="#FFFFFF">
-    <p class="eyebrow">{{EYEBROW — e.g. Chapter 04 / New Work / The Journal}}</p>
-  </td></tr>
-
-  <tr><td class="px" align="center" style="padding:18px 44px 0;" bgcolor="#FFFFFF">
-    <h1 class="display">{{HEADLINE — one line if you can, two at most}}</h1>
-  </td></tr>
-
-  <tr><td class="px" align="center" style="padding:22px 44px 0;" bgcolor="#FFFFFF">
-    <p class="body-copy" style="max-width:420px;margin:0 auto;">{{SUBHEAD — two sentences. Say the idea, not the offer.}}</p>
-  </td></tr>
-
-  <!-- ═══ BUTTON ════════════════════════════════════════════════════════ -->
-  <tr><td align="center" style="padding:34px 44px 0;" bgcolor="#FFFFFF">
-    <!--[if mso]>
-    <v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word"
-      href="{{CTA_URL}}" style="height:44px;v-text-anchor:middle;width:228px;" strokecolor="#5C1A22" strokeweight="1px" fillcolor="#FFFFFF">
-      <w:anchorlock/>
-      <center style="color:#5C1A22;font-family:Arial,sans-serif;font-size:10px;letter-spacing:2px;">{{CTA_LABEL}}</center>
-    </v:rect>
-    <![endif]-->
-    <!--[if !mso]><!-->
-    <a href="{{CTA_URL}}" style="display:inline-block;border:1px solid #5C1A22;color:#5C1A22;
-       font-family:'Helvetica Neue',Arial,sans-serif;font-size:10px;letter-spacing:.2em;
-       text-transform:uppercase;padding:15px 34px;background:#FFFFFF;" bgcolor="#FFFFFF">{{CTA_LABEL}}</a>
-    <!--<![endif]-->
   </td></tr>
 
   <tr><td class="sp-lg" style="height:64px;font-size:0;line-height:0;">&nbsp;</td></tr>
@@ -198,14 +167,14 @@ a{text-decoration:none;}
 
   <tr><td class="px" align="center" style="padding:0 44px 0;border-top:1px solid #DCD6CC;" bgcolor="#FFFFFF">
     <div style="height:44px;font-size:0;">&nbsp;</div>
-    <p class="eyebrow">{{MODULE_LABEL — e.g. The Lookbook}}</p>
+    <p class="eyebrow">The Lookbook</p>
   </td></tr>
 
   <tr><td class="px" style="padding:30px 44px 0;" bgcolor="#FFFFFF">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
       <tr><td align="center">
-        <img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/img/look-ivory.jpg" width="360" alt="{{LOOK_1_ALT}}" style="width:100%;max-width:360px;margin:0 auto;">
-        <p class="caption" style="padding-top:16px;">{{LOOK_1_NAME — e.g. 01 — Ivory silk, cut on the bias}}</p>
+        <img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/img/look-ivory.jpg" width="360" alt="Look 01, ivory silk gown cut on the bias" style="width:100%;max-width:360px;margin:0 auto;">
+        <p class="caption" style="padding-top:16px;">01 &mdash; Ivory silk, cut on the bias</p>
       </td></tr>
     </table>
   </td></tr>
@@ -213,8 +182,8 @@ a{text-decoration:none;}
   <tr><td class="px" style="padding:44px 44px 0;" bgcolor="#FFFFFF">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
       <tr><td align="center">
-        <img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/img/look-oxblood.jpg" width="360" alt="{{LOOK_2_ALT}}" style="width:100%;max-width:360px;margin:0 auto;">
-        <p class="caption" style="padding-top:16px;">{{LOOK_2_NAME — e.g. 02 — Oxblood calf, gold hardware}}</p>
+        <img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/img/look-oxblood.jpg" width="360" alt="Look 02, oxblood leather bag with gold hardware" style="width:100%;max-width:360px;margin:0 auto;">
+        <p class="caption" style="padding-top:16px;">02 &mdash; Oxblood calf, gold hardware</p>
       </td></tr>
     </table>
   </td></tr>
@@ -222,8 +191,8 @@ a{text-decoration:none;}
   <tr><td class="px" style="padding:44px 44px 0;" bgcolor="#FFFFFF">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
       <tr><td align="center">
-        <img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/img/look-charcoal.jpg" width="360" alt="{{LOOK_3_ALT}}" style="width:100%;max-width:360px;margin:0 auto;">
-        <p class="caption" style="padding-top:16px;">{{LOOK_3_NAME — e.g. 03 — Charcoal wool, structured shoulder}}</p>
+        <img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/img/look-charcoal.jpg" width="360" alt="Look 03, charcoal wool coat with structured shoulder" style="width:100%;max-width:360px;margin:0 auto;">
+        <p class="caption" style="padding-top:16px;">03 &mdash; Charcoal wool, structured shoulder</p>
       </td></tr>
     </table>
   </td></tr>
@@ -231,8 +200,8 @@ a{text-decoration:none;}
   <tr><td class="px" style="padding:44px 44px 0;" bgcolor="#FFFFFF">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
       <tr><td align="center">
-        <img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/img/look-leather.jpg" width="360" alt="{{LOOK_4_ALT}}" style="width:100%;max-width:360px;margin:0 auto;">
-        <p class="caption" style="padding-top:16px;">{{LOOK_4_NAME — e.g. 04 — Aged leather over taupe tailoring}}</p>
+        <img src="https://gauravmarketmaverick-cyber.github.io/ellington-vale-email/img/look-leather.jpg" width="360" alt="Look 04, aged leather jacket over taupe tailoring" style="width:100%;max-width:360px;margin:0 auto;">
+        <p class="caption" style="padding-top:16px;">04 &mdash; Aged leather over taupe tailoring</p>
       </td></tr>
     </table>
   </td></tr>
@@ -260,9 +229,9 @@ a{text-decoration:none;}
   ══════════════════════════════════════════════════════════════════════ -->
   <tr><td class="px" style="padding:0 44px;" bgcolor="#FFFFFF">
     <div style="border-top:1px solid #DCD6CC;padding-top:34px;text-align:center;">
-      <p class="eyebrow" style="color:#5C1A22;">{{REVEAL_PROMPT — e.g. A note from the studio}}</p>
+      <p class="eyebrow" style="color:#5C1A22;">A note from the studio</p>
       <p class="body-copy" style="max-width:430px;margin:26px auto 0;">
-        {{REVEAL_BODY — the longer thought. Three or four sentences.}}
+        Most identity work fails at the third application. It holds on the logo sheet, holds on the packaging, then falls apart the moment someone needs a store window or a paid social frame at 4pm on a Friday. So we build the awkward cases first &mdash; the ones nobody puts in the deck.
       </p>
     </div>
   </td></tr>
@@ -271,8 +240,8 @@ a{text-decoration:none;}
 
   <!-- ═══ SIGN-OFF ══════════════════════════════════════════════════════ -->
   <tr><td class="px" align="center" style="padding:0 44px;" bgcolor="#FFFFFF">
-    <p class="body-copy" style="max-width:400px;margin:0 auto;font-style:italic;">{{SIGN_OFF_LINE}}</p>
-    <p class="caption" style="padding-top:20px;">{{YOUR_NAME}} &nbsp;·&nbsp; Ellington &amp; Vale</p>
+    <p class="body-copy" style="max-width:400px;margin:0 auto;font-style:italic;">If you are building something that deserves to be recognised, write back. One line is enough.</p>
+    <p class="caption" style="padding-top:20px;">Ellington &amp; Vale &nbsp;·&nbsp; Ellington &amp; Vale</p>
   </td></tr>
 
   <tr><td class="sp-lg" style="height:64px;font-size:0;line-height:0;">&nbsp;</td></tr>
@@ -281,24 +250,24 @@ a{text-decoration:none;}
   <tr><td class="px" align="center" style="padding:34px 44px 44px;border-top:1px solid #DCD6CC;" bgcolor="#FFFFFF">
 
     <p class="eyebrow" style="font-size:9px;">
-      <a href="{{URL_INSTAGRAM}}" style="color:#6E665C;">Instagram</a>
+      <a href="https://instagram.com/ellingtonandvale" style="color:#6E665C;">Instagram</a>
       <span style="color:#DCD6CC;padding:0 8px;">·</span>
-      <a href="{{URL_LINKEDIN}}" style="color:#6E665C;">LinkedIn</a>
+      <a href="https://linkedin.com/company/ellingtonandvale" style="color:#6E665C;">LinkedIn</a>
       <span style="color:#DCD6CC;padding:0 8px;">·</span>
-      <a href="{{URL_BEHANCE}}" style="color:#6E665C;">Behance</a>
+      <a href="https://behance.net/ellingtonandvale" style="color:#6E665C;">Behance</a>
     </p>
 
     <p class="body-copy" style="font-size:11px;line-height:1.9;color:#9A9288;padding-top:26px;margin:0;">
       Ellington &amp; Vale &nbsp;·&nbsp; Strategic branding and creative direction<br>
-      {{STREET_ADDRESS}}, Gurugram, India<br>
+      [Street address], Gurugram, India<br>
       <a href="mailto:hello@ellingtonandvale.com" style="color:#9A9288;">hello@ellingtonandvale.com</a>
     </p>
 
     <p class="body-copy" style="font-size:10px;color:#B3ABA1;padding-top:22px;margin:0;">
-      You are receiving this because {{CONSENT_LINE}}.<br>
-      <a href="{{UNSUB_URL}}" style="color:#B3ABA1;text-decoration:underline;">Unsubscribe</a>
+      You are receiving this because you connected with the studio or subscribed on our site.<br>
+      <a href="#" style="color:#B3ABA1;text-decoration:underline;">Unsubscribe</a>
       &nbsp;·&nbsp;
-      <a href="{{PREFS_URL}}" style="color:#B3ABA1;text-decoration:underline;">Update preferences</a>
+      <a href="#" style="color:#B3ABA1;text-decoration:underline;">Update preferences</a>
     </p>
 
   </td></tr>
